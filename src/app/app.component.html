@@ -1,5 +1,9 @@
 <div class="container">
+  <button class="btn btn-warning mb-2" (click)="showAndHideToDo()">
+    Toggle ToDo List
+  </button>
   <app-to-do
+    *ngIf="this.ToggleToDoList"
     [cardTitle]="setCardTitle"
     (sendToList)="captureEvent($event)"
   ></app-to-do>

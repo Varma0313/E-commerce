@@ -37,10 +37,17 @@ export class ToDoComponent implements OnInit, OnChanges {
   addNewTask() {
     this.toDo.push(this.addTask);
     this.addTask = '';
+    this.sendToList.emit(this.toDo);
     console.log('Check', this.toDo);
   }
 
   deleteNewTask(index: number) {
     this.toDo.splice(index, 1);
+  }
+
+  ngOnDestroy(): void {
+    this.toDo = [];
+    this.addTask = '';
+    console.log('Destroy', 'Component is destroyed');
   }
 }
