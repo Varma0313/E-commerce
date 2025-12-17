@@ -47,8 +47,8 @@ export class ToDoComponent implements OnInit, OnChanges {
       isCompleted: false,
     };
     this.addTask = '';
-    // this.toDo.push(toDoItem);
-    this.toDo = [...this.toDo, toDoItem];
+    // this.toDo.push(toDoItem); // mutability - modify the existing array
+    this.toDo = [...this.toDo, toDoItem]; // immutability - every time new array create
     this.updateStorage();
   }
 
