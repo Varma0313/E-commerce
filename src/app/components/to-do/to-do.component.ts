@@ -10,11 +10,12 @@ import {
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IToDo } from '../interface/to-do-interface';
+import { TodoSortPipe } from '../pipes/todo-sort.pipe';
 
 @Component({
   selector: 'app-to-do',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, TodoSortPipe],
   templateUrl: './to-do.component.html',
   styleUrl: './to-do.component.scss',
 })
@@ -24,6 +25,7 @@ export class ToDoComponent implements OnInit, OnChanges {
 
   addTask: string = '';
   toDo: IToDo[] = [];
+  sortBy: 'completed' | 'created' | null = null;
 
   constructor() {}
 
@@ -66,7 +68,25 @@ export class ToDoComponent implements OnInit, OnChanges {
     this.updateStorage();
   }
 
-  deleteNewTask(item: IToDo) {}
+  deleteNewTask(item: IToDo) {
+    this.toDo = this.toDo.filter((toDoItem: IToDo) => {
+      if (item.time !== toDoItem.time) return toDoItem;
+      return;
+    });
+    this.updateStorage();
+  }
+
+  sortByCompletedAction() {
+    this.sortBy = 'completed';
+  }
+
+  sortByCreatedAction() {
+    this.sortBy = 'created';
+  }
+
+  refresh() {
+    this.sortBy = null;
+  }
 
   ngOnDestroy(): void {
     this.toDo = [];
