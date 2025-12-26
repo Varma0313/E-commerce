@@ -28,7 +28,17 @@ export class AppComponent {
 
   title = 'to-do';
 
+  currentView: 'todo' | 'register' = 'todo';
+
   showAndHideToDo() {
     this.ToggleToDoList = !this.ToggleToDoList;
+  }
+
+  loadToDo() {
+    this.currentView = 'todo';
+  }
+
+  LoadRegisterForm() {
+    this.currentView = 'register';
   }
 }

@@ -1,12 +1,31 @@
 <div class="container">
+  <div class="d-flex">
+    <div class="w-25">
+      <ol class="list-group list-group-numbered">
+        <li class="list-group-item" (click)="loadToDo()">TO DO App</li>
+        <li class="list-group-item" (click)="LoadRegisterForm()">
+          Register Form
+        </li>
+      </ol>
+    </div>
+    <div class="w-75">
+      <ng-container *ngIf="this.currentView === 'todo'">
+        <app-to-do
+          [cardTitle]="setCardTitle"
+          (sendToList)="captureEvent($event)"
+        ></app-to-do>
+      </ng-container>
+
+      <ng-container *ngIf="this.currentView === 'register'">
+        <app-register-form>Hello World</app-register-form>
+      </ng-container>
+    </div>
+  </div>
   <!-- <button class="btn btn-warning mb-2" (click)="showAndHideToDo()">
     Toggle ToDo List
   </button> -->
 
   <!-- *ngIf="this.ToggleToDoList" -->
-  <!-- <app-to-do
-    [cardTitle]="setCardTitle"
-    (sendToList)="captureEvent($event)"
-  ></app-to-do> -->
-  <app-register-form>Hello World</app-register-form>
+  <!--  -->
+  <router-outlet> </router-outlet>
 </div>
