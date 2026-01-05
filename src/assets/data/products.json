@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-1.jpg",
+    "name": "Samsung Galaxy S24 Ultra",
+    "availability": true,
+    "category": "Flagship",
+    "manufacturer": "Samsung",
+    "price": 129999
+  },
+  {
+    "id": 2,
+    "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-z-fold5-1.jpg",
+    "name": "Samsung Galaxy Z Fold 5",
+    "availability": true,
+    "category": "Foldable",
+    "manufacturer": "Samsung",
+    "price": 154999
+  },
+  {
+    "id": 3,
+    "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-z-flip5-1.jpg",
+    "name": "Samsung Galaxy Z Flip 5",
+    "availability": true,
+    "category": "Foldable",
+    "manufacturer": "Samsung",
+    "price": 99999
+  },
+  {
+    "id": 4,
+    "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-max-1.jpg",
+    "name": "iPhone 15 Pro Max",
+    "availability": true,
+    "category": "Flagship",
+    "manufacturer": "Apple",
+    "price": 159999
+  },
+  {
+    "id": 5,
+    "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-1.jpg",
+    "name": "iPhone 15 Pro",
+    "availability": true,
+    "category": "Flagship",
+    "manufacturer": "Apple",
+    "price": 139999
+  },
+  {
+    "id": 6,
+    "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-1.jpg",
+    "name": "iPhone 15",
+    "availability": true,
+    "category": "Premium",
+    "manufacturer": "Apple",
+    "price": 79999
+  },
+  {
+    "id": 7,
+    "image": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-1.jpg",
+    "name": "OnePlus 12",
+    "availability": true,
+    "category": "Flagship",
+    "manufacturer": "OnePlus",
+    "price": 69999
+  },
+  {
+    "id": 8,
+    "image": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-1.jpg",
+    "name": "Google Pixel 8 Pro",
+    "availability": true,
+    "category": "Flagship",
+    "manufacturer": "Google",
+    "price": 106999
+  },
+  {
+    "id": 9,
+    "image": "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-ultra-1.jpg",
+    "name": "Xiaomi 14 Ultra",
+    "availability": false,
+    "category": "Flagship",
+    "manufacturer": "Xiaomi",
+    "price": 99999
+  },
+  {
+    "id": 10,
+    "image": "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x100-pro-1.jpg",
+    "name": "Vivo X100 Pro",
+    "availability": true,
+    "category": "Flagship",
+    "manufacturer": "Vivo",
+    "price": 89999
+  },
+  {
+    "id": 11,
+    "image": "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-1.jpg",
+    "name": "Oppo Find X7 Ultra",
+    "availability": true,
+    "category": "Flagship",
+    "manufacturer": "Oppo",
+    "price": 94999
+  },
+  {
+    "id": 12,
+    "image": "https://fdn2.gsmarena.com/vv/pics/realme/realme-gt5-pro-1.jpg",
+    "name": "Realme GT 5 Pro",
+    "availability": true,
+    "category": "Premium",
+    "manufacturer": "Realme",
+    "price": 58999
+  },
+  {
+    "id": 13,
+    "image": "https://fdn2.gsmarena.com/vv/pics/nothing/nothing-phone-2-1.jpg",
+    "name": "Nothing Phone (2)",
+    "availability": true,
+    "category": "Premium",
+    "manufacturer": "Nothing",
+    "price": 44999
+  },
+  {
+    "id": 14,
+    "image": "https://fdn2.gsmarena.com/vv/pics/iqoo/iqoo-12-1.jpg",
+    "name": "iQOO 12",
+    "availability": true,
+    "category": "Performance",
+    "manufacturer": "iQOO",
+    "price": 52999
+  },
+  {
+    "id": 15,
+    "image": "https://fdn2.gsmarena.com/vv/pics/motorola/motorola-edge-40-pro-1.jpg",
+    "name": "Motorola Edge 40 Pro",
+    "availability": false,
+    "category": "Premium",
+    "manufacturer": "Motorola",
+    "price": 69999
+  },
+  {
+    "id": 16,
+    "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s23-fe-1.jpg",
+    "name": "Samsung Galaxy S23 FE",
+    "availability": true,
+    "category": "Midrange",
+    "manufacturer": "Samsung",
+    "price": 49999
+  },
+  {
+    "id": 17,
+    "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-1.jpg",
+    "name": "iPhone 14",
+    "availability": true,
+    "category": "Premium",
+    "manufacturer": "Apple",
+    "price": 69999
+  },
+  {
+    "id": 18,
+    "image": "https://fdn2.gsmarena.com/vv/pics/xiaomi/redmi-note-13-pro-plus-1.jpg",
+    "name": "Redmi Note 13 Pro+",
+    "availability": true,
+    "category": "Midrange",
+    "manufacturer": "Xiaomi",
+    "price": 31999
+  },
+  {
+    "id": 19,
+    "image": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-nord-ce-3-1.jpg",
+    "name": "OnePlus Nord CE 3",
+    "availability": true,
+    "category": "Midrange",
+    "manufacturer": "OnePlus",
+    "price": 26999
+  },
+  {
+    "id": 20,
+    "image": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-7a-1.jpg",
+    "name": "Google Pixel 7a",
+    "availability": true,
+    "category": "Midrange",
+    "manufacturer": "Google",
+    "price": 43999
+  }
+]

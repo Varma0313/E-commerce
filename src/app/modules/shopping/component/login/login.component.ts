@@ -7,6 +7,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { ShoppingApiService } from '../services/shopping-api.service';
+import { take } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -25,7 +27,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private shoppingAPI: ShoppingApiService
+    private shoppingAPI: ShoppingApiService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -58,14 +61,43 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  // Below code works only based on the backend availability
+
+  // login() {
+  //   this.loginApi = this.shoppingAPI
+  //     .login(this.loginForm.value)
+  //     .pipe(take(1))
+  //     .subscribe(
+  //       (data) => {
+  //         localStorage.setItem('Token', data.token);
+  //         if (data.token) {
+  //           this.router.navigate(['shopping', 'root']);
+  //         }
+  //         console.log('Login Success:', data);
+  //       },
+  //       (error) => {
+  //         console.error('Login Failed:', error);
+  //       }
+  //     );
+  // }
+
+  // Mock login to bypass backend dependency
+
   login() {
-    this.loginApi = this.shoppingAPI.login(this.loginForm.value).subscribe(
-      (data) => {
-        console.log('Login Success:', data);
-      },
-      (error) => {
-        console.error('Login Failed:', error);
-      }
-    );
+    this.shoppingAPI
+      .login(this.loginForm.value)
+      .pipe(take(1))
+      .subscribe(
+        (data) => {
+          localStorage.setItem('Token', data.token);
+          this.router.navigate(['shopping', 'root']);
+        },
+        (error) => {
+          console.warn('API failed, allowing mock login');
+
+          localStorage.setItem('Token', 'mock-token');
+          this.router.navigate(['shopping', 'root']);
+        }
+      );
   }
 }

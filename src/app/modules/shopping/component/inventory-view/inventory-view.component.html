@@ -1,0 +1,47 @@
+<table class="table table-sm table-hovered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Availablity</th>
+      <th>Category</th>
+      <th>Manufacturing</th>
+      <th>Price</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      class="align-middle"
+      *ngFor="let product of productdataSoucrce; let index = index"
+    >
+      <td>{{ index + 1 }}</td>
+      <td>
+        <img
+          src="{{ product.image }}"
+          alt="{{ product.name }}"
+          width="100"
+          height="100"
+          class="img-thumbnail rounded-circle"
+        />
+      </td>
+      <td>{{ product.name }}</td>
+      <td>
+        <span class="badge bg-success" *ngIf="product.availability"
+          >In Stock</span
+        ><span class="badge bg-danger" *ngIf="!product.availability"
+          >Out of Stock</span
+        >
+      </td>
+      <td>{{ product.category }}</td>
+      <td>{{ product.manufacturer }}</td>
+      <td>{{ product.price | currency : "INR" }}</td>
+      <td>
+        <button class="btn btn-sm btn-outline-warning me-2">View</button>
+        <button class="btn btn-sm btn-outline-primary me-2">Edit</button>
+        <button class="btn btn-sm btn-outline-danger me-2">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
