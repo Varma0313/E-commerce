@@ -1,0 +1,13 @@
+<div class="card" style="width: 20rem" *ngIf="productInformation">
+  <img [src]="productInformation.image" class="card-image-top" alt="" />
+  <div class="car-title text-capitalize">{{ productInformation.name }}</div>
+  <div class="card-body">
+    <p>
+      <span class="badge badge-violet">{{ productInformation.category }}</span>
+    </p>
+    <div class="card-text mb-2">{{ productInformation.discription }}</div>
+    <p class="card-text">
+      Price: {{ productInformation.price | currency : "INR" }}
+    </p>
+  </div>
+</div>

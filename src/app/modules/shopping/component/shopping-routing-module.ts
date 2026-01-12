@@ -8,6 +8,9 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { ProfileComponent } from './profile/profile.component';
 import { InventoryFormComponent } from './inventory-form/inventory-form.component';
 import { InventoryViewComponent } from './inventory-view/inventory-view.component';
+import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { productdescResolver } from './services/productdesc.resolver';
+import { CartComponent } from './cart/cart.component';
 
 export const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -22,7 +25,13 @@ export const routes: Routes = [
       { path: 'view', component: InventoryViewComponent },
     ],
   },
+  {
+    path: 'product-detail/:id',
+    component: ProductDescriptionComponent,
+    resolve: { product_desc: productdescResolver },
+  },
   { path: 'profile', component: ProfileComponent },
+  { path: 'cart', component: CartComponent },
 ];
 
 @NgModule({
