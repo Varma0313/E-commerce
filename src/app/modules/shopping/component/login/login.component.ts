@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     this.initLoginForm();
     this.loginForm.valueChanges.subscribe(console.log);
     this.loginForm.patchValue({
-      email: 'ravivarm@gmail.com',
+      email: 'ravivarma@gmail.com',
       password: '123456',
     });
   }
