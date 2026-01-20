@@ -1,0 +1,38 @@
+<div class="product-card">
+  <!-- Image -->
+  <div class="image-wrapper">
+    <img [src]="product?.image" alt="product" />
+    <span class="badge">New</span>
+  </div>
+
+  <!-- Body -->
+  <div class="card-body">
+    <!-- Title -->
+    <h5 class="title">{{ product?.title }}</h5>
+
+    <!-- Category -->
+    <p class="category">{{ product?.category }}</p>
+
+    <!-- Rating -->
+    <div class="rating">
+      ⭐ {{ product?.rating?.rate || 4.5 }} / 5
+      <span class="count">({{ product?.rating?.count || 120 }})</span>
+    </div>
+
+    <!-- Description -->
+    <p class="desc">{{ product?.discription | slice : 0 : 70 }}...</p>
+
+    <!-- Price -->
+    <div class="price">₹ {{ product?.price }}</div>
+
+    <!-- Quantity -->
+    <div class="qty-row">
+      <button (click)="decreaseQty()">−</button>
+      <span>{{ quantity }}</span>
+      <button (click)="increaseQty()">+</button>
+    </div>
+
+    <!-- Action -->
+    <button class="btn-add">Add to Cart</button>
+  </div>
+</div>
